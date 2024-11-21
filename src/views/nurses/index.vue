@@ -76,7 +76,12 @@ const handleDeleteNurse = (id: number) => {
       </a-row>
     </header>
     <main class="page_nurses-body">
-      <a-table :pagination="false" :dataSource="list" :columns="columns">
+      <a-table
+        bordered
+        :pagination="false"
+        :dataSource="list"
+        :columns="columns"
+      >
         <template #bodyCell="{ column, record }">
           <template v-if="column.key === 'actions'">
             <a-space>
