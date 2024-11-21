@@ -63,7 +63,7 @@ export const useNursesStore = defineStore('nurses', () => {
     const value = criteria[key];
     const nurse = baseList.value.find((nurse) => nurse[key] === value);
 
-    return {...nurse};
+    return nurse && {...nurse};
   }
 
   onMounted(() => {

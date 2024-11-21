@@ -20,7 +20,7 @@ export const useDepartmentsStore = defineStore('departments', () => {
     const value = criteria[key];
     const department = list.value.find((department) => department[key] === value)
 
-    return {...department};
+    return department && {...department};
   }
   
  
